@@ -1,5 +1,5 @@
 FROM maven:alpine
-ENV JAVA_OPTS='-Xms256m -Xmx1g'
+ENV JAVA_OPTS=-Xms256m\ -Xmx1g
 COPY . /
 RUN mvn -D skipTests=true install
 VOLUME /tmp
